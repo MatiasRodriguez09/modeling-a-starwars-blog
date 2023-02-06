@@ -49,10 +49,10 @@ class Favoritos(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    character_id = Column(Integer, ForeignKey('character.id'))
+    personajes_id = Column(Integer, ForeignKey('personajes.id'))
     user_id = Column(Integer, ForeignKey('user.id'))
-    planetas_id = Column(Integer, ForeignKey('planets.id'))
-    vehiculos_id = Column(Integer, ForeignKey('vehicles.id'))
+    planetas_id = Column(Integer, ForeignKey('planetas.id'))
+    vehiculos_id = Column(Integer, ForeignKey('vehiculos.id'))
     def to_dict(self):
         return {}
 
